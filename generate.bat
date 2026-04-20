@@ -184,6 +184,8 @@ if %fullbright% EQU 1 (
     del "materials\moon\moonbase_grate001.vtf" /Q
     del "materials\glass\glasswindow007.vtf" /Q
     del "materials\soho\metalgrate001.vtf" /Q
+    del "materials\swamp\props\fishingnet001.vtf" /Q
+    del "materials\swamp\props\fishingnet002.vtf" /Q
     :: -------------------------------
 
 :DONE
