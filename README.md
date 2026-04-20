@@ -16,7 +16,7 @@ Resized: Flattens textures into a 1x1 size, which workes on sv_pure servers. Thi
 2. Move the vpk file to /tf/custom/
 3. Done!
 
-To customize your vpk:
+Creating your own VPK:
 
 1. Download zip
 2. Unzip to custom folder
@@ -24,7 +24,7 @@ To customize your vpk:
 4. Select the options you want
 5. Done!
 
-## Turn into VPK
+## Creating your own VPK
 
 Having folders inside custom makes load times slower (regardless of contents) and vpk files exist to speed up load times. For this reason, a utility is provided to convert FlatTF2RGL into a VPK file.
 
