@@ -24,7 +24,7 @@ Creating your own VPK:
 4. Select the options you want
 5. Done!
 
-## Creating your own VPK
+## Turn into VPK
 
 Having folders inside custom makes load times slower (regardless of contents) and vpk files exist to speed up load times. For this reason, a utility is provided to convert FlatTF2RGL into a VPK file.
 
