@@ -7,6 +7,7 @@ A fork of CleanTF2plus that focuses on flattening textures, while excluding mate
 ## Flat Texture Modes
 
 Flat: Flattens textures into a solid color, but does not work on sv_pure servers.
+
 Resized: Flattens textures into a 1x1 size, which workes on sv_pure servers. This will create a subtle grid-like pattern.
 
 ## Install
