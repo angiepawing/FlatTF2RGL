@@ -12,6 +12,12 @@ Resized: Flattens textures into a 1x1 size, which workes on sv_pure servers. Thi
 
 ## Install
 
+1. [Download the vpk from releases](https://github.com/angiepawing/FlatTF2RGL/releases/tag/v1)
+2. Move the vpk file to /tf/custom/
+3. Done!
+
+To customize your vpk:
+
 1. Download zip
 2. Unzip to custom folder
 3. Run generate.bat
