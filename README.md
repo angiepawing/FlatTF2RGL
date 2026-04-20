@@ -24,4 +24,8 @@ Having folders inside custom makes load times slower (regardless of contents) an
 
 When you have fully generated the options you wanted:
 1. Run pack_vpk.bat
-2. Move/delete CleanTF2plus folder out of custom (otherwise there is no load time benefit)
+2. Move/delete FlatTF2RGL folder out of custom (otherwise there is no load time benefit)
+
+## Note
+
+I've done my absolute best to ensure that there are absolutely zero rule breaking textures still included, but if you do find any, please open an issue or a pull request.
