@@ -65,98 +65,10 @@ goto :FLAT_GEN
 
 :FLAT_GEN_STANDARD
 set "flat=1"
-goto :NOHATS
+goto :END
 
 :FLAT_GEN_RESIZED
 set "flat=2"
-goto :NOHATS
-
-:NOHATS
-set /P c=would you like to remove hats? Y/N/Help     
-if /I "%c%" EQU "Y" goto :NOHATS_GEN
-if /I "%c%" EQU "N" goto :PLAYERGIBS
-if /I "%c%" EQU "HELP" (echo this removes all hats and cosmetics from players) else (echo invalid input)
-goto :NOHATS
-
-:NOHATS_GEN
-set /P c=would you like to keep heads and feet? Y/N/Help     
-if /I "%c%" EQU "Y" goto :NOHATS_GEN_HEADSFEET
-if /I "%c%" EQU "N" goto :NOHATS_GEN_FULL
-if /I "%c%" EQU "HELP" (echo this keeps cosmetics that replace parts of the body so they aren't invisible) else (echo invalid input)
-goto :NOHATS_GEN
-
-:NOHATS_GEN_FULL
-set "nohats=1"
-goto :PLAYERGIBS
-
-:NOHATS_GEN_HEADSFEET
-set "nohats=2"
-goto :PLAYERGIBS
-
-:PLAYERGIBS
-set /P c=would you like to remove player gibs? Y/N/Help     
-if /I "%c%" EQU "Y" goto :PLAYERGIBS_GEN
-if /I "%c%" EQU "N" goto :SHELLS
-if /I "%c%" EQU "HELP" (echo this removes the flying body parts when people explode) else (echo invalid input)
-goto :PLAYERGIBS
-
-:PLAYERGIBS_GEN
-set "playergibs=1"
-goto :SHELLS
-
-:SHELLS
-set /P c=would you like to remove shells from guns? Y/N/Help     
-if /I "%c%" EQU "Y" goto :SHELLS_GEN
-if /I "%c%" EQU "N" goto :WEAPONGIBS
-if /I "%c%" EQU "HELP" (echo this removes the shells that are ejected from some guns) else (echo invalid input)
-goto :SHELLS
-
-:SHELLS_GEN
-set "shells=1"
-goto :WEAPONGIBS
-
-:WEAPONGIBS
-set /P c=would you like to remove weapon gibs? Y/N/Help     
-if /I "%c%" EQU "Y" goto :WEAPONGIBS_GEN
-if /I "%c%" EQU "N" goto :SURFACEPROPERTIES
-if /I "%c%" EQU "HELP" (echo this removes some gibs from certain projectiles) else (echo invalid input)
-goto :WEAPONGIBS
-
-:WEAPONGIBS_GEN
-set "weapongibs=1"
-goto :SURFACEPROPERTIES
-
-:SURFACEPROPERTIES
-set /P c=would you like to add surfaceproperties? Y/N/Help     
-if /I "%c%" EQU "Y" goto :SURFACEPROPERTIES_GEN_NOSTEPS
-if /I "%c%" EQU "N" goto :SOUNDSCAPES
-if /I "%c%" EQU "HELP" (echo this removes bullet impacts and gets rid of footstep sounds) else (echo invalid input)
-goto :SURFACEPROPERTIES
-
-:SURFACEPROPERTIES_GEN_NOSTEPS
-set "surfaceproperties=2"
-goto :SOUNDSCAPES
-
-:SOUNDSCAPES
-set /P c=would you like to remove soundscapes? Y/N/Help     
-if /I "%c%" EQU "Y" goto :SOUNDSCAPES_GEN
-if /I "%c%" EQU "N" goto :MTP
-if /I "%c%" EQU "HELP" (echo this removes many world sounds from maps) else (echo invalid input)
-goto :SOUNDSCAPES
-
-:SOUNDSCAPES_GEN
-set "soundscapes=1"
-goto :MTP
-
-:MTP
-set /P c=would you like to add mtp.cfg? Y/N/Help     
-if /I "%c%" EQU "Y" goto :MTP_GEN
-if /I "%c%" EQU "N" goto :END
-if /I "%c%" EQU "HELP" (echo this sets which maps are affected by pyrovision) else (echo invalid input)
-goto :MTP
-
-:MTP_GEN
-set "mtp=1"
 goto :END
 
 :: GENERATION
@@ -250,6 +162,29 @@ if %fullbright% EQU 1 (
 	echo "fullbright" >> dev\current_options.txt
 	echo done
 )
+
+:: --- EXCLUSIONS	 ---
+    echo removing exclusions...
+    del "materials\metal\chicken_wire001.vtf" /Q
+    del "materials\metal\metalgrate013a.vtf" /Q
+    del "materials\glass\glasswindow_distorted001.vtf" /Q
+    del "materials\glass\glasswindow001a.vtf" /Q
+    del "materials\glass\glasswindow001b.vtf" /Q
+    del "materials\glass\glasswindow002a.vtf" /Q
+    del "materials\glass\glasswindow002b.vtf" /Q
+    del "materials\glass\glasswindow002c.vtf" /Q
+    del "materials\glass\glasswindow003a.vtf" /Q
+    del "materials\glass\glasswindow004a.vtf" /Q
+    del "materials\glass\glasswindow005a.vtf" /Q
+    del "materials\glass\glasswindow006_mask.vtf" /Q
+    del "materials\glass\glasswindow006a.vtf" /Q
+    del "materials\glass\glasswindow007.vtf" /Q
+    del "materials\metal\metalgrate011a.vtf" /Q
+    del "materials\metal\metalgrate011b.vtf" /Q
+    del "materials\moon\moonbase_grate001.vtf" /Q
+    del "materials\glass\glasswindow007.vtf" /Q
+    del "materials\soho\metalgrate001.vtf" /Q
+    :: -------------------------------
 
 :DONE
 :: DELETE TGA FILES TO REDUCE VPK SIZE
