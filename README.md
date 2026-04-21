@@ -1,6 +1,6 @@
 # FlatTF2RGL
 
-A fork of CleanTF2plus that focuses on flattening textures, while excluding materials that would have been made invisible, which would break RGL [Rule 1003.3 - Game Exploits](https://docs.rgl.gg/rules/global/1003/#1003_3-game-exploits).
+A fork of CleanTF2plus that focuses on flattening textures, while excluding materials that would have been made invisible, which would break RGL [Rule 1003.3 - Game Exploits](https://docs.rgl.gg/rules/global/1003/#1003_3-game-exploits). RGL staff confirmed that making any props invisible will result in a full cheating ban, [as shown in this screenshot](https://imgur.com/a/z4EUxTF).
 
 [Example Showcase](https://imgur.com/a/flat-texture-issue-rgl-q3Jepn9)
 
